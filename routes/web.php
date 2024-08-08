@@ -1,11 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-Route::middleware('auth', 'verified')->group(function() {
+Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/', [HomeController::class, 'home'])->name('dashboard');
 });
 
