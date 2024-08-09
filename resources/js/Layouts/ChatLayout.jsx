@@ -6,12 +6,13 @@ const ChatLayout = ({ children }) => {
   const conversations = page.props.conversations;
   const selectedConversation = page.props.selectedConversations;
   console.log('conversations', conversations);
-  console.log('selectedConversation', selecteedConversation);
+  console.log('selectedConversation', selectedConversation);
+
    return (
-    <div>
+    <>
       ChatLayout
       <div>{ children }</div>
-    </div>
+    </>
    );
 };
 
